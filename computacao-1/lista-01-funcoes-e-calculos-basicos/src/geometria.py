@@ -1,6 +1,6 @@
 # 1. Defina uma função que calcule a área de um retângulo dados seus dois lados.
 def area_rectangle(base, height):
-    '''
+    """
     Calcula a área de um retângulo a partir da base e da altura.
 
     Parameters:
@@ -9,13 +9,14 @@ def area_rectangle(base, height):
 
     Returns:
     area_rectangle (float): Área do retângulo
-    '''
+    """
     area_rectangle = base * height
     return area_rectangle
 
+
 # 2. Defina uma função que calcule a área da superfície de um cubo que tem c por aresta.
 def area_cube(edge):
-    '''
+    """
     Calcula a área de um cubo a partir da medida da aresta.
 
     Parameters:
@@ -23,14 +24,17 @@ def area_cube(edge):
 
     Returns:
     area_cube (float): Área do cubo
-    '''
+    """
     area_cube = 6 * edge**2
     return area_cube
 
+
 # 3. Defina uma função que calcule a área da coroa circular (anel) formada por dois círculos de raios r1 e r2 (r1 > r2 e P i = 3.14).
 import math
+
+
 def area_circle(radius):
-    '''
+    """
     Calcula a área de um círculo a partir do raio.
 
     Parameters:
@@ -38,12 +42,13 @@ def area_circle(radius):
 
     Returns:
     area_circle (float): Área do círculo
-    '''
+    """
     area_circle = math.pi * radius**2
     return area_circle
 
-def area_anel(inner_radius,outer_radius):
-    '''
+
+def area_anel(inner_radius, outer_radius):
+    """
     Calcula a área de um anel a partir dos raios internos e externos.
 
     Parameters:
@@ -52,6 +57,6 @@ def area_anel(inner_radius,outer_radius):
 
     Returns:
     area_anel (float): Área do anel
-    '''
+    """
     area_anel = area_circle(inner_radius) - area_circle(outer_radius)
     return area_anel
