@@ -1,5 +1,6 @@
 # 8. Defina uma função que, dado o valor da conta de um restaurante, calcule a gorjeta do garçom, considerando que a gorjeta deve ser 15% do valor da conta.
 
+
 def gorjeta(conta):
     """
     Calcula a gorjeta do garçom a partir do valor da conta.
@@ -15,6 +16,7 @@ def gorjeta(conta):
 
 
 # 9. Defina uma nova função que, dado o valor da conta de um restaurante e a porcentagem exigida pela legislação para a gorjeta, calcule o valor dessa gorjeta.
+
 
 def gorjeta_legislacao(conta, porcentagem):
     """
@@ -33,6 +35,7 @@ def gorjeta_legislacao(conta, porcentagem):
 
 
 # 10. Defina uma função que calcule o saldo final de uma conta, dado o saldo inicial, o número de meses e a taxa de juros mensal (juros simples).
+
 
 def saldo_final(capital, taxa, tempo):
     """
@@ -53,6 +56,7 @@ def saldo_final(capital, taxa, tempo):
 
 # 11. Defina uma função que calcule a distância que a correnteza arrasta um barco que atravessa um rio.
 
+
 def arrasta(vel_correnteza, largura, vel_barco):
     """
     Calcula a distância que a correnteza arrasta um barco que atravessa um rio.
@@ -68,3 +72,22 @@ def arrasta(vel_correnteza, largura, vel_barco):
     # Digitar na mesma unidade. Exemplo: Se vel_correnteza for em m/s, a largura deve ser em m e a vel_barco em m/s.
     arrasta = vel_correnteza * (largura / vel_barco)
     return arrasta
+
+
+# test
+print("\n\033[1mTest Aplicações\033[0m")
+
+print("\nGorjeta (100) =", gorjeta(100))  # 15
+print("Gorjeta (500) =", gorjeta(500))  # 75
+
+print("\nGorjeta Legislação (100, 15) =", gorjeta_legislacao(100, 15))  # 15
+print("Gorjeta Legislação (200, 20) =", gorjeta_legislacao(200, 20))  # 40
+print("Gorjeta Legislação (500, 30) =", gorjeta_legislacao(500, 30))  # 150
+
+print("\nSaldo Final (1000, 5, 12) =", saldo_final(1000, 5, 12))  # 1600
+print("Saldo Final (1000, 5, 24) =", saldo_final(1000, 5, 24))  # 2200
+print("Saldo Final (1000, 5, 36) =", saldo_final(1000, 5, 36))  # 2800
+
+print("\nArrasta (1, 1, 1) =", arrasta(1, 1, 1))  # 1
+print("Arrasta (2, 2, 2) =", arrasta(2, 2, 2))  # 2
+print("Arrasta (3, 3, 3) =", arrasta(3, 3, 3))  # 3

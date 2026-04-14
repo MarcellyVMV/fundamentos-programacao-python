@@ -100,3 +100,24 @@ def error_PG(q, n, a1=1.0):
     else:
         error_PG = infinite_PG(q, a1) - finite_PG(q, n, a1)
         return error_PG
+
+
+# test
+print("\n\033[1mTest Álgebra\033[0m")
+
+print("\nMédia (-5, 7) =", media(-5, 7))  # 1
+print("Média (-2, 2) =", media(-2, 2))  # 0
+print("Média (5, 5) =", media(5, 5))  # 5
+print("Média (3, 4) =", media(3, 4))  # 3.5
+print("Média (3.0, 4.0) =", media(3.0, 4.0))  # 3.5
+
+print("\nOrdenada (1, 2, 3, 4) =", ordenada(1, 2, 3, 4))  # 27
+print("Ordenada (4, 5, 6, 7) =", ordenada(4, 5, 6, 7))  # 237
+
+print("\nMédia Ponderada (2, 3, 4, 5) =", media_ponderada(2, 3, 4, 5))  # 3.25
+print("Média Ponderada (4, 5, 6, 7) =", media_ponderada(4, 5, 6, 7))  # 5.17
+
+print("\nErro PG (0.5, 10) =", error_PG(0.5, 10))  # 0.002
+print(
+    "Erro PG (0.5, 10) =", error_PG(2.0, 50)
+)  # A razão da PG deve ser maior ou igual a 0 e menor que 1.
