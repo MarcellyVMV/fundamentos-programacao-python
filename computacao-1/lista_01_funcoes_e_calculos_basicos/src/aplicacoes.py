@@ -9,10 +9,10 @@ def gorjeta(conta):
     conta (float): Valor da conta do restaurante
 
     Returns:
-    gorjeta (float): Valor da gorjeta
+    valor (float): Valor da gorjeta
     """
-    gorjeta = conta * 0.15
-    return gorjeta
+    valor = conta * 0.15
+    return valor
 
 
 # 9. Defina uma nova função que, dado o valor da conta de um restaurante e a porcentagem exigida pela legislação para a gorjeta, calcule o valor dessa gorjeta.
@@ -27,11 +27,14 @@ def gorjeta_legislacao(conta, porcentagem):
     porcentagem (float): Porcentagem exigida pela legislação para a gorjeta
 
     Returns:
-    gorjeta_legislacao (float): Valor da gorjeta
+    valor (float): Valor da gorjeta
     """
-    # Digitar a porcentagem como um número inteiro. Exemplo: 10 = 10%.
-    gorjeta_legislacao = conta * (porcentagem / 100)
-    return gorjeta_legislacao
+    if porcentagem < 0:
+        return "Porcentagem não pode ser negativa."
+    else:
+        # Digitar a porcentagem como um número inteiro. Exemplo: 10 = 10%.
+        valor = conta * (porcentagem / 100)
+        return valor
 
 
 # 10. Defina uma função que calcule o saldo final de uma conta, dado o saldo inicial, o número de meses e a taxa de juros mensal (juros simples).
@@ -47,11 +50,11 @@ def saldo_final(capital, taxa, tempo):
     tempo (int): Número de meses
 
     Returns:
-    saldo_final (float): Saldo final da conta
+    montante (float): Saldo final da conta
     """
     # Digitar a taxa como um número inteiro. Exemplo: 5 = 5%. e o tempo em meses inteiros. Exemplo: 12 = 12 meses.
-    saldo_final = capital * (1 + (taxa / 100) * tempo)
-    return saldo_final
+    montante = capital * (1 + (taxa / 100) * tempo)
+    return montante
 
 
 # 11. Defina uma função que calcule a distância que a correnteza arrasta um barco que atravessa um rio.
@@ -67,11 +70,14 @@ def arrasta(vel_correnteza, largura, vel_barco):
     vel_barco (float): Velocidade do barco
 
     Returns:
-    arrasta (float): Distância que a correnteza arrasta o barco
+    distancia (float): Distância que a correnteza arrasta o barco
     """
-    # Digitar na mesma unidade. Exemplo: Se vel_correnteza for em m/s, a largura deve ser em m e a vel_barco em m/s.
-    arrasta = vel_correnteza * (largura / vel_barco)
-    return arrasta
+    if vel_barco == 0:
+        return "Velocidade do barco não pode ser 0."
+    else:
+        # Digitar na mesma unidade. Exemplo: Se vel_correnteza for em m/s, a largura deve ser em m e a vel_barco em m/s.
+        distancia = vel_correnteza * (largura / vel_barco)
+        return distancia
 
 
 # test

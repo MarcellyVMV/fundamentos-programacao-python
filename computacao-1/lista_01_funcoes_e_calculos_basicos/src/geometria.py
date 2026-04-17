@@ -8,10 +8,10 @@ def area_rectangle(base, height):
     height (float): Altura do retângulo
 
     Returns:
-    area_rectangle (float): Área do retângulo
+    area (float): Área do retângulo
     """
-    area_rectangle = base * height
-    return area_rectangle
+    area = base * height
+    return area
 
 
 # 2. Defina uma função que calcule a área da superfície de um cubo que tem c por aresta.
@@ -23,10 +23,10 @@ def area_cube(edge):
     edge (float): Aresta do cubo
 
     Returns:
-    area_cube (float): Área do cubo
+    area (float): Área do cubo
     """
-    area_cube = 6 * edge**2
-    return area_cube
+    area = 6 * edge**2
+    return area
 
 
 # 3. Defina uma função que calcule a área da coroa circular (anel) formada por dois círculos de raios r1 e r2 (r1 > r2 e P i = 3.14).
@@ -41,25 +41,28 @@ def area_circle(radius):
     radius (float): Raio do círculo
 
     Returns:
-    area_circle (float): Área do círculo
+    area (float): Área do círculo
     """
-    area_circle = math.pi * radius**2
-    return area_circle
+    area = math.pi * radius**2
+    return area
 
 
-def area_anel(inner_radius, outer_radius):
+def area_anel(outer_radius, inner_radius):
     """
     Calcula a área de um anel a partir dos raios internos e externos.
 
     Parameters:
-    inner_radius (float): Raio interno do anel
     outer_radius (float): Raio externo do anel
+    inner_radius (float): Raio interno do anel
 
     Returns:
-    area_anel (float): Área do anel
+    area (float): Área do anel
     """
-    area_anel = area_circle(inner_radius) - area_circle(outer_radius)
-    return area_anel
+    if inner_radius > outer_radius:
+        return "O raio interno deve ser menor que o externo."
+    else:
+        area = area_circle(outer_radius) - area_circle(inner_radius)
+        return area
 
 
 # test
