@@ -1,6 +1,4 @@
 # 8. Defina uma função que, dado o valor da conta de um restaurante, calcule a gorjeta do garçom, considerando que a gorjeta deve ser 15% do valor da conta.
-
-
 def gorjeta(conta):
     """
     Calcula a gorjeta do garçom a partir do valor da conta.
@@ -16,8 +14,6 @@ def gorjeta(conta):
 
 
 # 9. Defina uma nova função que, dado o valor da conta de um restaurante e a porcentagem exigida pela legislação para a gorjeta, calcule o valor dessa gorjeta.
-
-
 def gorjeta_legislacao(conta, porcentagem):
     """
     Calcula a gorjeta do garçom a partir do valor da conta e da porcentagem exigida pela legislação.
@@ -38,8 +34,6 @@ def gorjeta_legislacao(conta, porcentagem):
 
 
 # 10. Defina uma função que calcule o saldo final de uma conta, dado o saldo inicial, o número de meses e a taxa de juros mensal (juros simples).
-
-
 def saldo_final(capital, taxa, tempo):
     """
     Calcula o saldo final de uma conta a partir do saldo inicial, da taxa de juros mensal e do número de meses.
@@ -58,8 +52,6 @@ def saldo_final(capital, taxa, tempo):
 
 
 # 11. Defina uma função que calcule a distância que a correnteza arrasta um barco que atravessa um rio.
-
-
 def arrasta(vel_correnteza, largura, vel_barco):
     """
     Calcula a distância que a correnteza arrasta um barco que atravessa um rio.

@@ -1,6 +1,4 @@
 # 1. Defina uma função que retorne o valor absoluto de um número fornecido.
-
-
 def absoluto(n):
     """
     Calcula o valor absoluto de um número.
@@ -20,8 +18,6 @@ def absoluto(n):
 
 
 # 2. Defina uma função que retorne quantas (uma, duas ou nenhuma) são as raízes reais de uma equação de segundo grau, dados os valores dos três coeficientes.
-
-
 def discriminante(a, b, c):
     """
     Calcula o discriminante (delta) de um polinômio do segundo grau.
@@ -61,46 +57,7 @@ def quantidade_raizes(a, b, c):
         return "Essa equação não possui raiz real"
 
 
-# 3. Imagine que você quer enviar uma mensagem de felicitações e gostaria de repetir essas felicitações muitas vezes na mensagem.
-
-
-def loop_frase(texto, n=1):
-    """
-    Imprime uma frase repetida um número específico de vezes.
-
-    Parameters:
-    texto (string): Frase a ser impressa
-    n (int): Quantidade de vezes que a frase deve ser impressa
-
-    Returns:
-    None
-    """
-    for x in range(n):
-        print(texto)
-
-
-# 4. Defina uma função em Python que receba como entrada três números inteiros representando, respectivamente, dia, mês e ano. Sua função deve retornar uma única sequência de caracteres com estas informações formatadas no padrão usual de notação de datas: "dia/mês/ano".
-
-
-def formatar_data(dia, mes, ano):
-    """
-    Formata uma data.
-
-    Parameters:
-    dia (int): Dia
-    mes (int): Mês
-    ano (int): Ano
-
-    Returns:
-    data (string): Data formatada
-    """
-    data = f"{dia:02d}/{mes:02d}/{ano}"
-    return data
-
-
 # 5. Defina uma função em Python que tenha o comportamento da função matemática da figura abaixo para valores de entrada maiores ou iguais a zero. Para valores negativos o valor da função é sempre zero.
-
-
 def funcao_q5(x):
     """
     Calcula o valor da função definida na questão 5.
@@ -125,8 +82,6 @@ def funcao_q5(x):
 
 
 # 6. (a) uma função que calcule e retorne o valor do desconto de imposto de INSS
-
-
 def desconto_INSS(salBruto):
     """
     Calcula o valor do desconto de INSS com base no salário bruto.
@@ -149,8 +104,6 @@ def desconto_INSS(salBruto):
 
 
 # 6. (b) uma função que calcule e retorne o valor do desconto de IR
-
-
 def desconto_IR(salBruto):
     """
     Calcula o valor do desconto de IR com base no salário bruto.
@@ -173,8 +126,6 @@ def desconto_IR(salBruto):
 
 
 # 6. (c) uma função que calcule e retorne o salário líquido
-
-
 def salario_liquido(salBruto):
     """
     Calcula o salário líquido a partir do salário bruto, considerando os descontos de INSS e IR.
@@ -191,8 +142,9 @@ def salario_liquido(salBruto):
     salLiquido = salBruto - descontos
     return salLiquido
 
+
 # test
-print("\n\033[1mTest Condicionais\033[0m")
+print("\n\033[1mTest Condicionais/Lógica\033[0m")
 
 print("\nAbsoluto (5) =", absoluto(5))  # 5
 print("Absoluto (-5) =", absoluto(-5))  # 5
@@ -202,11 +154,6 @@ print("\nQuantidade de raízes (1, -3, 2) =", quantidade_raizes(1, -3, 2))  # 2 
 print("Quantidade de raízes (1, 2, 1) =", quantidade_raizes(1, 2, 1))  # 1 raiz
 print("Quantidade de raízes (1, 0, 1) =", quantidade_raizes(1, 0, 1))  # nenhuma
 print("Quantidade de raízes (0, 2, 1) =", quantidade_raizes(0, 2, 1))  # não é 2º grau
-
-print("\nLoop frase:")
-loop_frase("Oi", 3) 
-
-print("\nData formatada (1,2,2024) =", formatar_data(1, 2, 2024))  # 01/02/2024
 
 print("\nFunção q5 (-1) =", funcao_q5(-1))  # 0
 print("Função q5 (1) =", funcao_q5(1))  # 1

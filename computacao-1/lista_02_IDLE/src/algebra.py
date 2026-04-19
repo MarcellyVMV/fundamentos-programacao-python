@@ -1,11 +1,9 @@
 # 1. (a) teste as funções max e min no console do Python, digitando, por exemplo:
-
 print("\nmax(3,2.8,3.9) =", max(3, 2.8, 3.9))
 print("min(7,2,4,1,0) =", min(7, 2, 4, 1, 0))
 
+
 # 1. (b) Faça uma função que calcule e retorne a média de três números inteiros.
-
-
 def media(n1, n2, n3):
     """
     Calcula a média de três números.
@@ -23,8 +21,6 @@ def media(n1, n2, n3):
 
 
 # 1. (c) Faça uma função que retorne, dados três números, a diferença do maior deles com a média (obrigatoriamente use a função desenvolvida no item b).
-
-
 def diferenca_MaxMed(n1, n2, n3):
     """
     Calcula a diferença do maior deles com a média.
@@ -42,8 +38,6 @@ def diferenca_MaxMed(n1, n2, n3):
 
 
 # 1. (d) Faça uma função que retorne, dados três números, a soma do menor deles com a média (obrigatoriamente use a função desenvolvida no item b).
-
-
 def soma_MaxMed(n1, n2, n3):
     """
     Calcula a soma do menor deles com a média.

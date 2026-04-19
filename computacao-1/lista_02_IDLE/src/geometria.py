@@ -1,8 +1,7 @@
 import math
 
+
 # 4. (a) uma função que calcule a distância entre dois pontos em um plano dadas suas coordenadas.
-
-
 def distancia_2pontos(x1, y1, x2, y2):
     """
     Calcula a distância entre dois pontos em um plano dadas suas coordenadas.
@@ -52,8 +51,6 @@ def perimetro_triangulo(c1, c2):
 
 
 # 4. (c) uma função que calcule a soma do quadrado do seno com o quadrado do cosseno de um ângulo.
-
-
 def soma_pow2_SinCos(theta):
     """
     Calcula a soma do quadrado do seno com o quadrado do cosseno de um ângulo.
@@ -70,8 +67,6 @@ def soma_pow2_SinCos(theta):
 
 
 # 5. Escreva uma função que calcule a área de um setor circular, dados o raio e o ângulo. Use um argumento default para o ângulo, de modo que se nenhum ângulo for informado, a função retorne a área do círculo inteiro.
-
-
 def area_setor_circular(r, theta=360):
     """
     Calcula a área de um setor circular, dados o raio e o ângulo.
@@ -85,6 +80,7 @@ def area_setor_circular(r, theta=360):
     """
     area = (r**2) * (theta / 360) * math.pi
     return area
+
 
 # test
 print("\n\033[1mTest Geometria\033[0m")
