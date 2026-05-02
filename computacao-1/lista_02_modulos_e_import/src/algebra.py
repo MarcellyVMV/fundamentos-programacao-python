@@ -1,3 +1,6 @@
+# ----- FUNÇÕES DE ÁLGEBRA ----- #
+
+
 # 1. (a) teste as funções max e min no console do Python, digitando, por exemplo:
 print("\nmax(3,2.8,3.9) =", max(3, 2.8, 3.9))
 print("min(7,2,4,1,0) =", min(7, 2, 4, 1, 0))
@@ -14,10 +17,9 @@ def media(n1, n2, n3):
     n3 (int): Terceiro número
 
     Returns:
-    resultado (float): Média dos três números
+    float: Média dos três números
     """
-    resultado = (n1 + n2 + n3) / 3
-    return resultado
+    return (n1 + n2 + n3) / 3
 
 
 # 1. (c) Faça uma função que retorne, dados três números, a diferença do maior deles com a média (obrigatoriamente use a função desenvolvida no item b).
@@ -31,7 +33,7 @@ def diferenca_MaxMed(n1, n2, n3):
     n3 (float): Terceiro número
 
     Returns:
-    diferenca (float): Diferença do maior deles com a média
+    float: Diferença do maior deles com a média
     """
     diferenca = max(n1, n2, n3) - media(n1, n2, n3)
     return diferenca
@@ -48,7 +50,7 @@ def soma_MaxMed(n1, n2, n3):
     n3 (float): Terceiro número
 
     Returns:
-    soma (float): Soma do menor deles com a média
+    float: Soma do menor deles com a média
     """
     soma = min(n1, n2, n3) + media(n1, n2, n3)
     return soma
@@ -65,7 +67,7 @@ def discriminante(a, b, c):
     c (float): Terceiro coeficiente
 
     Returns:
-    delta (float): Discriminante
+    float: Discriminante
     """
     delta = b**2 - 4 * a * c
     return delta
@@ -82,7 +84,7 @@ def raiz1(a, b, c):  # Sem math
     c (float): Terceiro coeficiente
 
     Returns:
-    raiz (float): Primeira raiz real
+    float: Primeira raiz real
     """
     if a == 0:
         return "Não é equação do segundo grau."
@@ -100,7 +102,7 @@ import math
 
 def raiz2(a, b, c):  # Com Math
     """
-    Calcula a primeira raiz real de uma equação do segundo grau.
+    Calcula a segunda raiz real de uma equação do segundo grau.
 
     Parameters:
     a (float): Primeiro coeficiente
@@ -108,7 +110,7 @@ def raiz2(a, b, c):  # Com Math
     c (float): Terceiro coeficiente
 
     Returns:
-    raiz (float): Segunda raiz real
+    float: Segunda raiz real
     """
     if a == 0:
         return "Não é equação do segundo grau."
@@ -131,7 +133,7 @@ def n_termos(inicial, final, r):
     r (float): Razão
 
     Returns:
-    n (int): Número de termos
+    int: Número de termos
     """
     if r == 0:
         return "A razão deve ser diferente de 0."
@@ -151,7 +153,7 @@ def soma_PA(inicial, final, r):
     r (float): Razão
 
     Returns:
-    soma (float): Soma da PA
+    float: Soma da PA
     """
     if r == 0:
         return "A razão deve ser diferente de 0."
@@ -160,31 +162,33 @@ def soma_PA(inicial, final, r):
         return soma
 
 
-# test
-print("\n\033[1mTest Álgebra\033[0m")
+# ----- MAIN ----- #
+if __name__ == "__main__":
+    # ----- TESTE DE ÁLGEBRA ----- #
+    print("\n\033[1mTest Álgebra\033[0m")
 
-print("\nMédia (1,2,3) =", media(1, 2, 3))  # 2
-print("Média (5,5,5) =", media(5, 5, 5))  # 5
+    print("\nMédia (1,2,3) =", media(1, 2, 3))  # 2
+    print("Média (5,5,5) =", media(5, 5, 5))  # 5
 
-print("\nDiferença Max - Média (1,2,3) =", diferenca_MaxMed(1, 2, 3))  # 1
-print("Diferença Max - Média (10,5,0) =", diferenca_MaxMed(10, 5, 0))  # 5
+    print("\nDiferença Max - Média (1,2,3) =", diferenca_MaxMed(1, 2, 3))  # 1
+    print("Diferença Max - Média (10,5,0) =", diferenca_MaxMed(10, 5, 0))  # 5
 
-print("\nSoma Min + Média (1,2,3) =", soma_MaxMed(1, 2, 3))  # 3
-print("Soma Min + Média (10,5,0) =", soma_MaxMed(10, 5, 0))  # 5
+    print("\nSoma Min + Média (1,2,3) =", soma_MaxMed(1, 2, 3))  # 3
+    print("Soma Min + Média (10,5,0) =", soma_MaxMed(10, 5, 0))  # 5
 
-print("\nDelta (1, -3, 2) =", discriminante(1, -3, 2))  # 1
+    print("\nDelta (1, -3, 2) =", discriminante(1, -3, 2))  # 1
 
-print("\nRaiz1 (1, -3, 2) =", raiz1(1, -3, 2))  # 2
-print("Raiz2 (1, -3, 2) =", raiz2(1, -3, 2))  # 1
+    print("\nRaiz1 (1, -3, 2) =", raiz1(1, -3, 2))  # 2
+    print("Raiz2 (1, -3, 2) =", raiz2(1, -3, 2))  # 1
 
-print("\nRaiz1 (1, 0, 1) =", raiz1(1, 0, 1))  # sem raiz real
-print("Raiz2 (1, 0, 1) =", raiz2(1, 0, 1))  # sem raiz real
+    print("\nRaiz1 (1, 0, 1) =", raiz1(1, 0, 1))  # sem raiz real
+    print("Raiz2 (1, 0, 1) =", raiz2(1, 0, 1))  # sem raiz real
 
-print("\nNúmero de termos (1 → 10, r=1) =", n_termos(1, 10, 1))  # 10
-print("Número de termos (2 → 20, r=2) =", n_termos(2, 20, 2))  # 10
+    print("\nNúmero de termos (1 → 10, r=1) =", n_termos(1, 10, 1))  # 10
+    print("Número de termos (2 → 20, r=2) =", n_termos(2, 20, 2))  # 10
 
-print("\nSoma PA (1 → 10, r=1) =", soma_PA(1, 10, 1))  # 55
-print("Soma PA (2 → 20, r=2) =", soma_PA(2, 20, 2))  # 110
+    print("\nSoma PA (1 → 10, r=1) =", soma_PA(1, 10, 1))  # 55
+    print("Soma PA (2 → 20, r=2) =", soma_PA(2, 20, 2))  # 110
 
-print("\nNúmero de termos (1 → 10, r=0) =", n_termos(1, 10, 0))  # erro
-print("Soma PA (1 → 10, r=0) =", soma_PA(1, 10, 0))  # erro
+    print("\nNúmero de termos (1 → 10, r=0) =", n_termos(1, 10, 0))  # erro
+    print("Soma PA (1 → 10, r=0) =", soma_PA(1, 10, 0))  # erro

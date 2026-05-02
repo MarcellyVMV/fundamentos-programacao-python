@@ -1,3 +1,6 @@
+# ----- FUNÇÕES DE LÓGICA ----- #
+
+
 # 1. Defina uma função que retorne o valor absoluto de um número fornecido.
 def absoluto(n):
     """
@@ -7,7 +10,7 @@ def absoluto(n):
     n (float): Número
 
     Returns:
-    n (int): Valor absoluto do número
+    int: Valor absoluto do número
     """
     if n >= 0:
         return n
@@ -28,7 +31,7 @@ def discriminante(a, b, c):
     c (float): Terceiro coeficiente
 
     Returns:
-    delta (float): Discriminante
+    float: Discriminante
     """
     delta = b**2 - 4 * a * c
     return delta
@@ -44,7 +47,7 @@ def quantidade_raizes(a, b, c):
     c (float): Terceiro coeficiente
 
     Returns:
-    (string): Quantidade de raízes reais
+    string: Quantidade de raízes reais
     """
     if a == 0:
         return "A equação não é do segundo grau"
@@ -66,7 +69,7 @@ def funcao_q5(x):
     x (float): Valor de entrada
 
     Returns:
-    y (float): Valor da função
+    float: Valor da função
     """
     if x >= 0 and x < 2:
         y = x
@@ -90,7 +93,7 @@ def desconto_INSS(salBruto):
     salBruto (float): Salário bruto
 
     Returns:
-    desconto (float): Desconto de INSS
+    float: Desconto de INSS
     """
     if salBruto >= 0 and salBruto <= 2000:
         desconto = salBruto * 0.06
@@ -112,7 +115,7 @@ def desconto_IR(salBruto):
     salBruto (float): Salário bruto
 
     Returns:
-    desconto (float): Desconto de IR
+    float: Desconto de IR
     """
     if salBruto >= 0 and salBruto <= 2500:
         desconto = salBruto * 0.11
@@ -134,7 +137,7 @@ def salario_liquido(salBruto):
     salBruto (float): Salário bruto
 
     Returns:
-    salLiquido (float): Salário líquido
+    float: Salário líquido
     """
     if salBruto < 0:
         return "Digite seu salário (Inteiro Positivo), não o que sobra no fim do mês"
@@ -143,31 +146,37 @@ def salario_liquido(salBruto):
     return salLiquido
 
 
-# test
-print("\n\033[1mTest Condicionais/Lógica\033[0m")
+# ----- MAIN ----- #
+if __name__ == "__main__":
+    # ----- TESTE DE LÓGICA ----- #
+    print("\n\033[1mTest Condicionais/Lógica\033[0m")
 
-print("\nAbsoluto (5) =", absoluto(5))  # 5
-print("Absoluto (-5) =", absoluto(-5))  # 5
-print("Absoluto (-2.7) =", absoluto(-2.7))  # 2.7
+    print("\nAbsoluto (5) =", absoluto(5))  # 5
+    print("Absoluto (-5) =", absoluto(-5))  # 5
+    print("Absoluto (-2.7) =", absoluto(-2.7))  # 2.7
 
-print("\nQuantidade de raízes (1, -3, 2) =", quantidade_raizes(1, -3, 2))  # 2 raízes
-print("Quantidade de raízes (1, 2, 1) =", quantidade_raizes(1, 2, 1))  # 1 raiz
-print("Quantidade de raízes (1, 0, 1) =", quantidade_raizes(1, 0, 1))  # nenhuma
-print("Quantidade de raízes (0, 2, 1) =", quantidade_raizes(0, 2, 1))  # não é 2º grau
+    print(
+        "\nQuantidade de raízes (1, -3, 2) =", quantidade_raizes(1, -3, 2)
+    )  # 2 raízes
+    print("Quantidade de raízes (1, 2, 1) =", quantidade_raizes(1, 2, 1))  # 1 raiz
+    print("Quantidade de raízes (1, 0, 1) =", quantidade_raizes(1, 0, 1))  # nenhuma
+    print(
+        "Quantidade de raízes (0, 2, 1) =", quantidade_raizes(0, 2, 1)
+    )  # não é 2º grau
 
-print("\nFunção q5 (-1) =", funcao_q5(-1))  # 0
-print("Função q5 (1) =", funcao_q5(1))  # 1
-print("Função q5 (2.5) =", funcao_q5(2.5))  # 2
-print("Função q5 (4) =", funcao_q5(4))  # 3
-print("Função q5 (6) =", funcao_q5(6))  # 4
+    print("\nFunção q5 (-1) =", funcao_q5(-1))  # 0
+    print("Função q5 (1) =", funcao_q5(1))  # 1
+    print("Função q5 (2.5) =", funcao_q5(2.5))  # 2
+    print("Função q5 (4) =", funcao_q5(4))  # 3
+    print("Função q5 (6) =", funcao_q5(6))  # 4
 
-print("\nINSS (2000) =", desconto_INSS(2000))  # 120
-print("INSS (2500) =", desconto_INSS(2500))  # 200
-print("INSS (4000) =", desconto_INSS(4000))  # 400
+    print("\nINSS (2000) =", desconto_INSS(2000))  # 120
+    print("INSS (2500) =", desconto_INSS(2500))  # 200
+    print("INSS (4000) =", desconto_INSS(4000))  # 400
 
-print("\nIR (2000) =", desconto_IR(2000))  # 220
-print("IR (3000) =", desconto_IR(3000))  # 450
-print("IR (6000) =", desconto_IR(6000))  # 1320
+    print("\nIR (2000) =", desconto_IR(2000))  # 220
+    print("IR (3000) =", desconto_IR(3000))  # 450
+    print("IR (6000) =", desconto_IR(6000))  # 1320
 
-print("\nSalário líquido (2000) =", salario_liquido(2000))  # 1660
-print("Salário líquido (4000) =", salario_liquido(4000))  # 3000
+    print("\nSalário líquido (2000) =", salario_liquido(2000))  # 1660
+    print("Salário líquido (4000) =", salario_liquido(4000))  # 3000

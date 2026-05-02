@@ -1,3 +1,6 @@
+# ----- FUNÇÕES DE ÁLGEBRA ----- #
+
+
 # 4. Termine o desenvolvimento da função que calcula a média de dois números.
 def media(num1, num2):
     """
@@ -8,10 +11,9 @@ def media(num1, num2):
     num2 (float): Segundo número
 
     Returns:
-    resultado (float): Média dos dois números
+    float: Média dos dois números
     """
-    resultado = (num1 + num2) / 2
-    return resultado
+    return (num1 + num2) / 2
 
 
 # 5. Defina uma função que calcule a ordenada de uma função de segundo grau dados os parâmetros a, b, c e a abscissa.
@@ -26,7 +28,7 @@ def ordenada(a, b, c, x):
     x (float): Abscissa
 
     Returns:
-    y (float): Ordenada
+    float: Ordenada
     """
     y = (a * (x**2)) + (b * x) + c
     return y
@@ -44,7 +46,7 @@ def media_ponderada(num1, peso1, num2, peso2):
     peso2 (float): Peso do segundo número
 
     Returns:
-    media (float): Média ponderada
+    float: Média ponderada
     """
     if peso1 > 0 or peso2 > 0:
         media = (num1 * peso1 + num2 * peso2) / (peso1 + peso2)
@@ -63,7 +65,7 @@ def infinite_PG(q, a1=1.0):
     a1 (float): Primeiro termo da PG
 
     Returns:
-    soma_PG (float): Soma da PG infinita
+    float: Soma da PG infinita
     """
     soma_PG = a1 / (1.0 - q)
     return soma_PG
@@ -78,7 +80,7 @@ def finite_PG(q, n, a1=1.0):
     a1 (float): Primeiro termo da PG
 
     Returns:
-    soma_PG (float): Soma dos n primeiros termos
+    float: Soma dos n primeiros termos
     """
     soma_PG = a1 * (1.0 - q**n) / (1.0 - q)
     return soma_PG
@@ -94,7 +96,7 @@ def error_PG(q, n, a1=1.0):
     a1 (float): Primeiro termo da PG
 
     Returns:
-    error (float): Erro entre as somas
+    float: Erro entre as somas
     """
     if q < 0 or q >= 1:  # Verifica se a razão da PG é válida: q ∈ [0, 1)
         return "A razão da PG deve ser maior ou igual a 0 e menor que 1."
@@ -105,20 +107,24 @@ def error_PG(q, n, a1=1.0):
         return error
 
 
-# test
-print("\n\033[1mTest Álgebra\033[0m")
+# ----- MAIN ----- #
+if __name__ == "__main__":
+    # ----- TESTE DE ÁLGEBRA ----- #
+    print("\n\033[1mTest Álgebra\033[0m")
 
-print("\nMédia (-5, 7) =", media(-5, 7))  # 1
-print("Média (-2, 2) =", media(-2, 2))  # 0
-print("Média (5, 5) =", media(5, 5))  # 5
-print("Média (3, 4) =", media(3, 4))  # 3.5
-print("Média (3.0, 4.0) =", media(3.0, 4.0))  # 3.5
+    print("\nMédia (-5, 7) =", media(-5, 7))  # 1
+    print("Média (-2, 2) =", media(-2, 2))  # 0
+    print("Média (5, 5) =", media(5, 5))  # 5
+    print("Média (3, 4) =", media(3, 4))  # 3.5
+    print("Média (3.0, 4.0) =", media(3.0, 4.0))  # 3.5
 
-print("\nOrdenada (1, 2, 3, 4) =", ordenada(1, 2, 3, 4))  # 27
-print("Ordenada (4, 5, 6, 7) =", ordenada(4, 5, 6, 7))  # 237
+    print("\nOrdenada (1, 2, 3, 4) =", ordenada(1, 2, 3, 4))  # 27
+    print("Ordenada (4, 5, 6, 7) =", ordenada(4, 5, 6, 7))  # 237
 
-print("\nMédia Ponderada (2, 3, 4, 5) =", media_ponderada(2, 3, 4, 5))  # 3.25
-print("Média Ponderada (4, 5, 6, 7) =", media_ponderada(4, 5, 6, 7))  # 5.17
+    print("\nMédia Ponderada (2, 3, 4, 5) =", media_ponderada(2, 3, 4, 5))  # 3.25
+    print("Média Ponderada (4, 5, 6, 7) =", media_ponderada(4, 5, 6, 7))  # 5.17
 
-print("\nErro PG (0.5, 10) =", error_PG(0.5, 10))  # 0.002
-print("Erro PG (2.0, 50) =", error_PG(2.0, 50))  # A razão da PG deve ser maior ou igual a 0 e menor que 1.
+    print("\nErro PG (0.5, 10) =", error_PG(0.5, 10))  # 0.002
+    print(
+        "Erro PG (2.0, 50) =", error_PG(2.0, 50)
+    )  # A razão da PG deve ser maior ou igual a 0 e menor que 1.

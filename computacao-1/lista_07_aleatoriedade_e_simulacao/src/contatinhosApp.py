@@ -43,6 +43,7 @@ def criar_contato(nome: str, telefone="", email: str = "", instagram: str = ""):
     else:
         telefones = []
     contato = [nome, telefones, email, instagram]
+    contatos.append(contato)
     print(f"\n\033[1mContato {contato[0]} criado.\033[0m")
     return contato
 
@@ -98,9 +99,29 @@ def excluir_telefone(contato, telefone):
         return False
 
 
+# (d) Buscar os dados de um contato salvo: sua fun ̧c ̃ao recebe como entrada a lista de contatos e uma string referente ao nome buscado, e deve retornar uma lista de contatos que tem o nome buscado.
+def buscar_contato(contatos, nome):
+    """
+    Busca os dados de um contato salvo.
+
+    Parameters:
+    contatos (list): A lista de contatos.
+    nome (str): O nome do contato a ser buscado.
+
+    Returns:
+    list: Uma lista de contatos que tem o nome buscado.
+    """
+    resultados = []
+    for contato in contatos:
+        if nome.lower() in str(contato[0]).lower():
+            resultados.append(contato)
+    return resultados
+
+
 # ----- MAIN ----- #
 if __name__ == "__main__":
     # ----- TESTE DE CONTATINHOS ----- #
+    contatos = []
     bruno = criar_contato(
         "Bruno Campos",
         "2199112233",
@@ -115,6 +136,7 @@ if __name__ == "__main__":
     att_contato(marcelly, 3, "@marcelly")
     att_contato(bruno, 1, "2133992211")
     att_contato(bruno, 5, "NDA")  # Teste de índice inválido
+    att_contato(bruno, 1, "2133992211")  # Teste de telefone já cadastrado
 
     excluir_telefone(bruno, "2199112233")
     excluir_telefone(bruno, "0000000000")  # Teste de telefone inválido
@@ -122,3 +144,9 @@ if __name__ == "__main__":
 
     print_contato(bruno)
     print_contato(marcelly)
+
+    marcello = criar_contato("Marcello", "21912345678")
+
+    print(buscar_contato(contatos, "Bruno"))
+    print(buscar_contato(contatos, "Marcel"))
+    print(buscar_contato(contatos, "Maria"))  # Teste de contato inexistente

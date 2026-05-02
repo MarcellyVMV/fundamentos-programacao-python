@@ -1,32 +1,33 @@
+# ----- FUNÇÕES DE GEOMETRIA ----- #
+
+
 # 1. Defina uma função que calcule a área de um retângulo dados seus dois lados.
-def area_rectangle(base, height):
+def area_retangulo(base, altura):
     """
     Calcula a área de um retângulo a partir da base e da altura.
 
     Parameters:
     base (float): Base do retângulo
-    height (float): Altura do retângulo
+    altura (float): Altura do retângulo
 
     Returns:
-    area (float): Área do retângulo
+    float: Área do retângulo
     """
-    area = base * height
-    return area
+    return base * altura
 
 
 # 2. Defina uma função que calcule a área da superfície de um cubo que tem c por aresta.
-def area_cube(edge):
+def area_cubo(aresta):
     """
     Calcula a área de um cubo a partir da medida da aresta.
 
     Parameters:
-    edge (float): Aresta do cubo
+    aresta (float): Aresta do cubo
 
     Returns:
-    area (float): Área do cubo
+    float: Área do cubo
     """
-    area = 6 * edge**2
-    return area
+    return 6 * aresta**2
 
 
 # 3. Defina uma função que calcule a área da coroa circular (anel) formada por dois círculos de raios r1 e r2 (r1 > r2 e P i = 3.14).
@@ -41,10 +42,9 @@ def area_circle(radius):
     radius (float): Raio do círculo
 
     Returns:
-    area (float): Área do círculo
+    float: Área do círculo
     """
-    area = math.pi * radius**2
-    return area
+    return math.pi * radius**2
 
 
 def area_anel(outer_radius, inner_radius):
@@ -56,7 +56,7 @@ def area_anel(outer_radius, inner_radius):
     inner_radius (float): Raio interno do anel
 
     Returns:
-    area (float): Área do anel
+    float: Área do anel
     """
     if inner_radius > outer_radius:
         return "O raio interno deve ser menor que o externo."
@@ -65,17 +65,19 @@ def area_anel(outer_radius, inner_radius):
         return area
 
 
-# test
-print("\n\033[1mTest Geometria\033[0m")
+# ----- MAIN ----- #
+if __name__ == "__main__":
+    # ----- TESTE DE GEOMETRIA ----- #
+    print("\n\033[1mTest Geometria\033[0m")
 
-print("\nÁrea retângulo (5, 7) =", area_rectangle(5, 7))  # 35
-print("Área retângulo (15, 2) =", area_rectangle(15, 2))  # 30
-print("Área retângulo (500, 700) =", area_rectangle(500, 700))  # 350000
-print("Área retângulo (5, 0) =", area_rectangle(5, 0))  # 0
+    print("\nÁrea retângulo (5, 7) =", area_retangulo(5, 7))  # 35
+    print("Área retângulo (15, 2) =", area_retangulo(15, 2))  # 30
+    print("Área retângulo (500, 700) =", area_retangulo(500, 700))  # 350000
+    print("Área retângulo (5, 0) =", area_retangulo(5, 0))  # 0
 
-print("\nÁrea cubo (5) =", area_cube(5))  # 150
-print("Área cubo (7) =", area_cube(7))  # 294
+    print("\nÁrea cubo (5) =", area_cubo(5))  # 150
+    print("Área cubo (7) =", area_cubo(7))  # 294
 
-print("\nÁrea anel (2, 1) =", area_anel(2, 1))  # 9.42
-print("Área anel (15, 5) =", area_anel(15, 5))  # 628.32
-print("Área anel (100, 0) =", area_anel(100, 0))  # 31415.93
+    print("\nÁrea anel (2, 1) =", area_anel(2, 1))  # 9.42
+    print("Área anel (15, 5) =", area_anel(15, 5))  # 628.32
+    print("Área anel (100, 0) =", area_anel(100, 0))  # 31415.93

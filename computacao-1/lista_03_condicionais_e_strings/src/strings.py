@@ -1,16 +1,19 @@
+# ----- FUNÇÕES DE STRINGS ----- #
+
+
 # 3. Imagine que você quer enviar uma mensagem de felicitações e gostaria de repetir essas felicitações muitas vezes na mensagem.
 def loop_frase(texto, n=1):
     """
     Imprime uma frase repetida um número específico de vezes.
 
     Parameters:
-    texto (string): Frase a ser impressa
+    texto (str): Frase a ser impressa
     n (int): Quantidade de vezes que a frase deve ser impressa
 
     Returns:
     None
     """
-    for x in range(n):
+    for _ in range(n):
         print(texto)
 
 
@@ -25,16 +28,18 @@ def formatar_data(dia, mes, ano):
     ano (int): Ano
 
     Returns:
-    data (string): Data formatada
+    str: Data formatada
     """
     data = f"{dia:02d}/{mes:02d}/{ano}"
     return data
 
 
-# test
-print("\n\033[1mTest Strings\033[0m")
+# ----- MAIN ----- #
+if __name__ == "__main__":
+    # ----- TESTE DE STRINGS ----- #
+    print("\n\033[1mTest Strings\033[0m")
 
-print("\nLoop frase:")
-loop_frase("Oi", 3)
+    print("\nLoop frase:")
+    loop_frase("Oi", 3)
 
-print("\nData formatada (1,2,2024) =", formatar_data(1, 2, 2024))  # 01/02/2024
+    print("\nData formatada (1,2,2024) =", formatar_data(1, 2, 2024))  # 01/02/2024

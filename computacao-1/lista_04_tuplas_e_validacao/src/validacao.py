@@ -1,3 +1,6 @@
+# ----- FUNÇÕES DE VALIDAÇÃO ----- #
+
+
 # 3. (…) Faça uma função que receba como entrada uma string contendo uma sequência de dígitos, que supostamente corresponde ao número de telefone informado por um usuário (…)
 def telefone(numero):
     """
@@ -7,7 +10,7 @@ def telefone(numero):
     numero (str): String contendo a sequência de dígitos do número de telefone.
 
     Returns:
-    number (tuple): Tupla contendo o código de área e o número formatado.
+    tuple: Tupla contendo o código de área e o número formatado.
     """
     if not numero.isdigit():
         return "Número inválido"
@@ -29,7 +32,7 @@ def formato_data(data):
     data (str): String de 8 posições representando uma data.
 
     Returns:
-    retornar (list): Lista contendo os formatos possíveis.
+    list: Lista contendo os formatos possíveis.
     """
     retornar = []
     if (
@@ -56,14 +59,20 @@ def formato_data(data):
     return retornar
 
 
-# test
-print("\n\033[1mTest Strings\033[0m")
+# ----- MAIN ----- #
+if __name__ == "__main__":
+    # ----- TESTE DE VALIDAÇÃO ----- #
+    print("\n\033[1mTest Validação\033[0m")
 
-print("\nTelefone (21987654321) =", telefone("21987654321"))  # ('21', '987654321')
-print("Telefone (987654321) =", telefone("987654321"))  # ('', '987654321')
-print("Telefone (123) =", telefone("123"))  # inválido
-print("Telefone (21abc123456) =", telefone("21abc123456"))  # inválido
+    print("\nTelefone (21987654321) =", telefone("21987654321"))  # ('21', '987654321')
+    print("Telefone (987654321) =", telefone("987654321"))  # ('', '987654321')
+    print("Telefone (123) =", telefone("123"))  # inválido
+    print("Telefone (21abc123456) =", telefone("21abc123456"))  # inválido
 
-print("\nFormato data (01/01/26) =", formato_data("01/01/26"))  # ['dd/mm/yy', 'yy/mm/dd', 'mm/dd/yy']
-print("Formato data (31/12/99) =", formato_data("31/12/99"))  # ['dd/mm/yy']
-print("Formato data (17/05/24) =", formato_data("17/05/24"))  # ['dd/mm/yy', 'yy/mm/dd']
+    print(
+        "\nFormato data (01/01/26) =", formato_data("01/01/26")
+    )  # ['dd/mm/yy', 'yy/mm/dd', 'mm/dd/yy']
+    print("Formato data (31/12/99) =", formato_data("31/12/99"))  # ['dd/mm/yy']
+    print(
+        "Formato data (17/05/24) =", formato_data("17/05/24")
+    )  # ['dd/mm/yy', 'yy/mm/dd']

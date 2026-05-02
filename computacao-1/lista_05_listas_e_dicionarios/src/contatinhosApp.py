@@ -75,29 +75,6 @@ def att_contato(contato, index, info):
     return True
 
 
-# (c) Excluir telefone. Isso significa modificar informações de um contato existente. Será passado como entrada a lista com as informações atuais de um contato, e o telefone que se deseja excluir:
-def excluir_telefone(contato, telefone):
-    """
-    Exclui um telefone de um contato existente.
-
-    Parameters:
-    contato (list): O contato do qual excluir o telefone.
-    telefone (str): O telefone a ser excluído.
-
-    Returns:
-    bool: True se a exclusão for bem-sucedida, False caso contrário.
-    """
-    if telefone in contato[1]:
-        contato[1].remove(telefone)
-        print(f"\n\033[1mTelefone {telefone} excluído do contato {contato[0]}.\033[0m")
-        return True
-    else:
-        print(
-            f"\n\033[1mTelefone {telefone} não encontrado no contato {contato[0]}.\033[0m"
-        )
-        return False
-
-
 # ----- MAIN ----- #
 if __name__ == "__main__":
     # ----- TESTE DE CONTATINHOS ----- #
@@ -115,10 +92,7 @@ if __name__ == "__main__":
     att_contato(marcelly, 3, "@marcelly")
     att_contato(bruno, 1, "2133992211")
     att_contato(bruno, 5, "NDA")  # Teste de índice inválido
-
-    excluir_telefone(bruno, "2199112233")
-    excluir_telefone(bruno, "0000000000")  # Teste de telefone inválido
-    excluir_telefone(marcelly, "21911112222")
+    att_contato(bruno, 1, "2133992211")  # Teste de telefone já cadastrado
 
     print_contato(bruno)
     print_contato(marcelly)
